@@ -25,7 +25,7 @@ int snprintf(char *s, size_t n, const char *fmt, ...)
     }
 
     va_start(argp, fmt);
-#if defined(_TRUNCATE) && !defined(__MINGW32__)
+#if 0 /* defined(_TRUNCATE) && !defined(__MINGW32__) */
     ret = _vsnprintf_s(s, n, _TRUNCATE, fmt, argp);
 #else
     ret = _vsnprintf(s, n, fmt, argp);
