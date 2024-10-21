@@ -111,7 +111,7 @@
 #if (defined(__MINGW32__) && __USE_MINGW_ANSI_STDIO == 0) || (defined(_MSC_VER) && _MSC_VER < 1800)
    #include <inttypes.h>
    #define MBEDTLS_PRINTF_SIZET     PRIuPTR
-   #define MBEDTLS_PRINTF_LONGLONG  "I64d"
+   #define MBEDTLS_PRINTF_LONGLONG  "lld"
 #else \
     /* (defined(__MINGW32__)  && __USE_MINGW_ANSI_STDIO == 0) || (defined(_MSC_VER) && _MSC_VER < 1800) */
    #define MBEDTLS_PRINTF_SIZET     "zu"
